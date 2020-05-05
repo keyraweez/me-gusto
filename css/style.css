@@ -1,0 +1,238 @@
+/* Settings */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    font-family: 'PT Sans Narrow', sans-serif;
+    background: #e4ecff no-repeat;
+    background-size: cover;
+}
+.wrapper{
+    padding-left: 10px; padding-right: 10px;
+    max-width:1170px;
+    margin: auto;
+}
+li{
+    list-style: none;
+}
+/* header main settings */
+.header{
+    background: #cb2b2b no-repeat;
+    background-size: cover;  
+    position: fixed; z-index: 2;  
+    width: 100%;
+}
+/* header for dekstop */
+.header__menu{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+.header__img{
+    padding-top: 8px;
+}
+.pizza{
+    transition: .4s;
+    transform: rotate(720deg);
+}
+.pizza:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.dekstop__menu{
+    display: flex;
+    margin-left: -20px;
+    align-items: center;
+}
+.menu_link{
+    text-decoration: none;
+    padding-left: 50px;
+    font-size: 20px;
+    position: relative;
+    color: #fff;
+    transition: .4s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.menu_link:hover{
+    font-size:25px;
+}
+.header__logo{
+    font-family: 'Shadows Into Light', cursive;
+    align-self: center;
+    color: #fff;
+    transition: .3s;
+}
+.header__logo:hover{
+    cursor: pointer;
+    font-size:18px;
+}
+/* adapt menu */
+.hamburger-menu{
+    display: none;
+}
+#menu__toggle {
+    opacity: 0;
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+  }
+  
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 56px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px black;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -12px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 12px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 350px;
+    margin: 0;
+    padding: 40px 0;
+    list-style: none;
+    background: #cb2b2b;
+    box-shadow: 10px 30px 15px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+    border-bottom-left-radius: 65px;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+@media(max-width:1108px){
+    .header{
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+    }
+    .dekstop__menu,.pizza{
+        display: none;
+    }
+    .header{
+        background: none;
+    }
+    .hamburger-menu{
+        display: block;
+        top: 40px;
+        right: 0;
+        position: absolute;       
+    }
+    .header__logo{
+        color: #cb2b2b;
+    }
+}
+/* slider */
+.slider__main{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.slider{
+    position: relative;
+    display: flex;
+    width: 600px;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .8);
+}
+.slider img{
+    position: absolute;
+    width: 600px; height: 380px; transform: all .6s;
+}
+#img1 {
+    opacity: 1;
+    transition: .3s;
+}
+#img2 {
+    opacity: 0;
+    transition: .3s;
+}
+#img3 {
+    opacity: 0;
+    transition: .3s;
+}
+.fas{
+    cursor: pointer;
+    position: absolute;
+    color: #e7e7e7;
+    z-index: 1;
+    top: 50%;
+    transform: scale(2.6);
+    transition: .4s;
+}
+.fas:hover{color: #fff;}
+.fa-chevron-left{left: 30px;}
+.fa-chevron-right{right: 30px;}
+.circle{
+    position: absolute;
+    bottom: 10px;
+    width: 15px;
+    height: 15px;
+    border: 2.5px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+    transition: .4s;
+}
+#circle1{
+    left: 46%;
+    background: #fff;
+}
+#circle2{
+    left: 50%;
+}
+#circle3{
+    left: 54%;
+}

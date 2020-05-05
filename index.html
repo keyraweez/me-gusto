@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+<title>Me gusto</title>
+</head>
+<body>
+<header class="header">
+    <div class="wrapper">
+        <!-- Adapt menu -->
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+        
+            <ul class="menu__box">
+              <li><a class="menu__item" href="#page2">Меню</a></li>
+                    <li><a class="menu__item" href="#page3">Контакты</a></li>
+                    <li><a class="menu__item" href="#page4">О нас</a></li>
+                    <li><a class="menu__item" href="#page5">Тёмная тема</a></li>
+                    <li><a class="menu__item" href="#page6">Сделать заказ</a></li>
+            </ul>
+          </div>
+        <!-- Dekstop menu -->
+        <div class="header__menu">
+            <div class='header__img'>
+                <img src='imgs/pizza2.png' class='pizza'>
+            </div>
+            <div class="header__logo">
+                <h1>Me-gusto</h1>
+            </div>
+            <ul class="dekstop__menu">
+                <li><a href="#" class="menu_link">Меню</a></li>
+                <li><a href="#" class="menu_link">Контакты</a></li>
+                <li><a href="#" class="menu_link">О нас</a></li>
+                <li><a href="#" class="menu_link">Тёмная тема</a></li>
+                <li><a href="#" class="menu_link">Сделать заказ</a></li>
+            </ul>
+            <div class='header__img'>
+                <img src='imgs/pizza.png' class='pizza'>
+            </div>
+        </div>
+        
+    </div>
+</header> 
+<section class="slider__main">
+    <div class="slider">
+        <img src="imgs/slider/1.jpg" id="img1">
+        <img src="imgs/slider/2.jpg" id="img2">
+        <img src="imgs/slider/3.jpg" id="img3">
+        <span class="fas fa-chevron-left" onclick="left()"></span>
+        <span class="fas fa-chevron-right" onclick="right()"></span>
+        <span class="circle" id="circle1"></span>
+        <span class="circle" id="circle2"></span>
+        <span class="circle" id="circle3"></span>
+</div>
+</section>
+</body>
+<script>
+    var imgNum = 1;
+    setInterval(() => {right();},5000);
+    function right(){
+        if(imgNum != 3){
+            imgNum += 1;
+            changeImg(imgNum, -1);
+        }
+        else{
+            imgNum = 1;
+            changeImg(imgNum, +2);
+        }
+    }
+    function left(){
+        if(imgNum != 1){
+            imgNum -= 1;
+            changeImg(imgNum, +1);
+        }
+        else{
+            imgNum = 3;
+            changeImg(imgNum, -2);
+        }
+    }
+    function changeImg(value,count){
+        document.getElementById(`img${value + count}`).style.opacity = '0';
+        document.getElementById(`img${value}`).style.opacity = '1';
+        document.getElementById(`circle${value + count}`).style.background = 'transparent';
+        document.getElementById(`circle${value}`).style.background = 'white';
+    }
+</script>
+</html>
