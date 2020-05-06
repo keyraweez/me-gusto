@@ -17,11 +17,11 @@
             </label>
         
             <ul class="menu__box">
-              <li><a class="menu__item" href="#page2">Меню</a></li>
-                    <li><a class="menu__item" href="#page3">Контакты</a></li>
-                    <li><a class="menu__item" href="#page4">О нас</a></li>
-                    <li><a class="menu__item" href="#page5">Тёмная тема</a></li>
-                    <li><a class="menu__item" href="#page6">Сделать заказ</a></li>
+              <li><a class="menu__item" href="#">Меню</a></li>
+                    <li><a class="menu__item" href="#">Контакты</a></li>
+                    <li><a class="menu__item" href="#page2">О нас</a></li>
+                    <li><a class="menu__item" href="#">Тёмная тема</a></li>
+                    <li><a class="menu__item" href="#">Сделать заказ</a></li>
             </ul>
           </div>
         <!-- Dekstop menu -->
@@ -30,12 +30,12 @@
                 <img src='imgs/pizza2.png' class='pizza'>
             </div>
             <div class="header__logo">
-                <h1>Me-gusto</h1>
+                <a href="#"><h1>Me Gusto</h1></a>
             </div>
             <ul class="dekstop__menu">
                 <li><a href="#" class="menu_link">Меню</a></li>
                 <li><a href="#" class="menu_link">Контакты</a></li>
-                <li><a href="#" class="menu_link">О нас</a></li>
+                <li><a href="#page2" class="menu_link">О нас</a></li>
                 <li><a href="#" class="menu_link">Тёмная тема</a></li>
                 <li><a href="#" class="menu_link">Сделать заказ</a></li>
             </ul>
@@ -47,46 +47,92 @@
     </div>
 </header> 
 <section class="slider__main">
-    <div class="slider">
-        <img src="imgs/slider/1.jpg" id="img1">
-        <img src="imgs/slider/2.jpg" id="img2">
-        <img src="imgs/slider/3.jpg" id="img3">
-        <span class="fas fa-chevron-left" onclick="left()"></span>
-        <span class="fas fa-chevron-right" onclick="right()"></span>
-        <span class="circle" id="circle1"></span>
-        <span class="circle" id="circle2"></span>
-        <span class="circle" id="circle3"></span>
+    <div class="slider__body">
+        <div class="slider">
+            <img src="imgs/slider/1.jpg" id="img1">
+            <img src="imgs/slider/2.jpg" id="img2">
+            <img src="imgs/slider/3.jpg" id="img3">
+            <span class="fas fa-chevron-left" onclick="left()"> < </span>
+            <span class="fas fa-chevron-right" onclick="right()"> > </span>
+            <span class="circle" id="circle1"></span>
+            <span class="circle" id="circle2"></span>
+            <span class="circle" id="circle3"></span>
+        </div>
 </div>
 </section>
+<section class="features" id="page2">
+    <!-- feat == features -->
+    <div class="wrapper">
+        <div class="feat__mainblock">
+            <div class="feat__first-clm">
+                <div class="clm__text sh">
+                    <h2>Особенности:</h2>
+                    <div class="options">
+                    <p class="sp">Доставка еды</p>
+                    <p class="sp">Добрый персонал</p>
+                    <p class="sp">Уютный интерьер</p>
+                    <p class="sp">Вкусная еда</p>
+                    <p class="sp">Нормальные цены</p>
+                    <p class="sp">Наличие кальяна</p>  
+                </div>
+            </div>
+            <div class="feat__img">
+                <a href="#"><img src="imgs/features/bigpizza.png"></a>
+            </div>
+            <div class="feat__second-clm">
+                <div class="clm__shedule sh">
+                    <h2>График работы:</h2>
+                    <div class="options">
+                    <p class="sp">Понедельник	10:00-22:00</p>
+                    <p class="sp">Вторник	10:00-22:00</p>
+                    <p class="sp">Среда	10:00-22:00</p>
+                    <p class="sp">Четверг	10:00-22:00</p>
+                    <p class="sp">Пятница	10:00-22:00</p>
+                    <p class="sp">Суббота 10:00-22:00</p>  
+                    <p class="sp">Воскресенье 10:00-22:00</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="order" id="page3">
+    <div class="wrapper">
+        <div class="order__mainblock" id="mainblock">
+            <span>Заказ</span>
+            <div class="choose">
+                <input type="text">
+            </div>
+            <span>Ваш адрес</span>
+            <div class="adress">    
+                <input type="text">
+            </div>
+            <span>Ваш телефон</span>
+            <div class="number">
+                <input type="tel">
+            </div>
+            <div class="order__btn">
+                <button type="submit" onclick='accept()' class="accept">Сделать заказ</button>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__main">
+            <div class="footer__text">
+                <p class="ft-one">Me Gusto</p>
+                <p class="ft-two">Адрес</p>
+                <p class="ft-three">Телефон: 0689940444, 0669940444</p>
+            </div>
+            <div class="footer__soc">
+                <a href="#"><img src="imgs/footer/vk.png" alt=""></a>
+                <a href="#"><img src="imgs/footer/insta.png" alt=""></a>
+                <a href="#"><img src="imgs/footer/face.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
-<script>
-    var imgNum = 1;
-    setInterval(() => {right();},5000);
-    function right(){
-        if(imgNum != 3){
-            imgNum += 1;
-            changeImg(imgNum, -1);
-        }
-        else{
-            imgNum = 1;
-            changeImg(imgNum, +2);
-        }
-    }
-    function left(){
-        if(imgNum != 1){
-            imgNum -= 1;
-            changeImg(imgNum, +1);
-        }
-        else{
-            imgNum = 3;
-            changeImg(imgNum, -2);
-        }
-    }
-    function changeImg(value,count){
-        document.getElementById(`img${value + count}`).style.opacity = '0';
-        document.getElementById(`img${value}`).style.opacity = '1';
-        document.getElementById(`circle${value + count}`).style.background = 'transparent';
-        document.getElementById(`circle${value}`).style.background = 'white';
-    }
-</script>
+<script src="js/slider.js"></script>
+<script src="js/accept.js"></script>
 </html>
