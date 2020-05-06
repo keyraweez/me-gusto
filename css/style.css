@@ -373,7 +373,10 @@ li{
     font-family: 'Shadows Into Light', cursive;  
 }
 .ft-two,.ft-three{
-    font-weight: 300; font-size: 25px;
+    font-weight: 300; font-size: 25px; color: #fff;
+}
+.ft-three{
+    padding-top: 20px;
 }
 .footer__soc img:hover{
     transform: scale(1.1);
