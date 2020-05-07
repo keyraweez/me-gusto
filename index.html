@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="theme-color" content="black">
+    <meta name="msapplication-navbutton-color" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -19,10 +23,9 @@
         
             <ul class="menu__box">
               <li><a class="menu__item" href="#">Меню</a></li>
-                    <li><a class="menu__item" href="#">Контакты</a></li>
+                    <li><a class="menu__item" href="#page3">Контакты</a></li>
                     <li><a class="menu__item" href="#page2">О нас</a></li>
                     <li><a class="menu__item" href="#">Тёмная тема</a></li>
-                    <li><a class="menu__item" href="#">Сделать заказ</a></li>
             </ul>
           </div>
         <!-- Dekstop menu -->
@@ -35,10 +38,9 @@
             </div>
             <ul class="dekstop__menu">
                 <li><a href="#" class="menu_link">Меню</a></li>
-                <li><a href="#" class="menu_link">Контакты</a></li>
+                <li><a href="#page3" class="menu_link">Контакты</a></li>
                 <li><a href="#page2" class="menu_link">О нас</a></li>
                 <li><a href="#" class="menu_link">Тёмная тема</a></li>
-                <li><a href="#" class="menu_link">Сделать заказ</a></li>
             </ul>
             <div class='header__img'>
                 <img src='imgs/pizza.png' class='pizza'>
@@ -116,11 +118,11 @@
             <div class="order__btn">
                 <button type="submit" onclick='accept()' class="accept">Сделать заказ</button>
             </div>
-            <p class="ft-three">Телефон: 0689940444, 0669940444</p>
+            <p class="order__number">Телефон: 0689940444, 0669940444</p>
         </div>
     </div>
 </section>
-<footer class="footer">
+<footer class="footer" id="page4">
     <div class="wrapper">
         <div class="footer__body">
             <div class="footer__text">

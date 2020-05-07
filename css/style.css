@@ -65,7 +65,6 @@ li{
 .header__logo{
     font-family: 'Shadows Into Light', cursive;
     align-self: center;
-    
     transition: .3s;
 }
 .header__logo a{
@@ -104,7 +103,7 @@ li{
     display: flex;
     align-items: center;
     position: fixed;
-    top: 10px;
+    top: 20px;
     right: 20px;
     width: 56px;
     height: 36px;
@@ -125,11 +124,11 @@ li{
   }
   .menu__btn > span::before {
     content: '';
-    top: -10px;
+    top: -12px;
   }
   .menu__btn > span::after {
     content: '';
-    top: 10px;
+    top: 12px;
   }
   .menu__box {
     display: block;
@@ -343,6 +342,11 @@ li{
 .order__mainblock span{
     color: #e4ecff;
     font-size: 25px; font-weight: bold;
+}
+.order__number{
+    font-size: 25px;
+    color: #e4ecff;
+    padding-top: 15px;
 }
 .order__mainblock input{
     background: none;
