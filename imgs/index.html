@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="theme-color" content="black">
+    <meta name="msapplication-navbutton-color" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/norm.css" rel="stylesheet">
+<title>Me gusto</title>
+</head>
+<body>
+<header class="header" id="head">
+    <div class="wrapper">
+        <!-- Adapt menu -->
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+        
+            <ul class="menu__box" id="head_adapt">
+              <li><a class="menu__item" href="menu/menu.html">Меню</a></li>
+                    <li><a class="menu__item" href="#page3">Контакты</a></li>
+                    <li><a class="menu__item" href="#page2">О нас</a></li>
+                    <div class="menu__btn_body">
+                        <li><button class="menu__btn_black" id="menu__btn_adapt" onclick="darkmode();">Тёмная тема</button></li>
+                    <li><button class="menu__btn_white" id="menu__btn_adapt" onclick="lightmode();">Светлая тема</button></li>
+                    </div>
+            </ul>
+          </div>
+        <!-- Dekstop menu -->
+        <div class="header__menu">
+            <div class='header__img'>
+                <img src='imgs/pizza2.png' class='pizza'>
+            </div>
+            <div class="header__logo">
+                <a href="#"><h1>Me Gusto</h1></a>
+            </div>
+            <ul class="dekstop__menu">
+                <li><a href="menu/menu.html" class="menu_link">Меню</a></li>
+                <li><a href="#page3" class="menu_link">Контакты</a></li>
+                <li><a href="#page2" class="menu_link">О нас</a></li>
+                <div class="btn__menu_body">
+                    <li><button class="menu__btn_black" id="menu__btn" onclick="darkmode();">Тёмная тема</button></li>
+                    <li><button class="menu__btn_white" id="menu__btn" onclick="lightmode();">Светлая тема</button></li>
+                </div>
+            </ul>
+            <div class='header__img'>
+                <img src='imgs/pizza.png' class='pizza'>
+            </div>
+        </div>
+        
+    </div>
+</header> 
+<section class="slider__main">
+    <div class="slider__body">
+        <div class="slider">
+            <a href="#"><img src="imgs/slider/1.jpg" id="img1"></a>
+            <a href="#"><img src="imgs/slider/2.jpg" id="img2"></a>
+            <a href="#"><img src="imgs/slider/3.jpg" id="img3"></a>
+            <span class="fas fa-chevron-left" onclick="left()"> < </span>
+            <span class="fas fa-chevron-right" onclick="right()"> > </span>
+            <span class="circle" id="circle1"></span>
+            <span class="circle" id="circle2"></span>
+            <span class="circle" id="circle3"></span>
+        </div>
+</div>
+</section>
+<section class="features" id="page2">
+    <!-- feat == features -->
+    <div class="wrapper">
+        <div class="feat__mainblock" id="feat">
+            <div class="feat__first-clm">
+                <div class="clm__text sh">
+                    <h2>Особенности:</h2>
+                    <div class="options">
+                    <p class="sp">Доставка еды</p>
+                    <p class="sp">Добрый персонал</p>
+                    <p class="sp">Уютный интерьер</p>
+                    <p class="sp">Вкусная еда</p>
+                    <p class="sp">Нормальные цены</p>
+                    <p class="sp">Наличие кальяна</p>  
+                    
+                </div>
+            </div>
+            <div class="feat__img">
+                <a href="#"><img src="imgs/features/bigpizza.png"></a>
+            </div>
+            <div class="feat__second-clm">
+                <div class="clm__shedule sh">
+                    <h2>График работы:</h2>
+                    <div class="options">
+                    <p class="sp">Понедельник	10:00-22:00</p>
+                    <p class="sp">Вторник	10:00-22:00</p>
+                    <p class="sp">Среда	10:00-22:00</p>
+                    <p class="sp">Четверг	10:00-22:00</p>
+                    <p class="sp">Пятница	10:00-22:00</p>
+                    <p class="sp">Суббота 10:00-22:00</p>  
+                    <p class="sp">Воскресенье 10:00-22:00</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="order" id="page3">
+    <div class="wrapper">
+        <div class="order__mainblock" id="mainblock">
+                <h2>Быстрый заказ</h2>
+            <span>Заказ</span>
+            <div class="choose">
+                <input type="text">
+            </div>
+            <span>Ваш адрес</span>
+            <div class="adress">    
+                <input type="text">
+            </div>
+            <span>Ваш телефон</span>
+            <div class="number">
+                <input type="tel">
+            </div>
+            <div class="order__btn">
+                <button type="submit" id="accept" onclick='accept()' class="accept">Сделать заказ</button>
+            </div>
+            <p class="order__number">Телефон: 0689940444, 0669940444</p>
+        </div>
+    </div>
+</section>
+<footer class="footer" id="page4">
+    <div class="wrapper">
+        <div class="footer__body">
+            <div class="footer__text">
+                <h2>Me Gusto</h2>
+                <p>Адрес: улица Пушкина,дом кукушкина</p>
+            </div>
+            <div class="footer__soc">
+                <img src="imgs/footer/vk.png" alt="vk">
+                <img src="imgs/footer/insta.png" alt="insta">
+                <img src="imgs/footer/face.png" alt="face">
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="js/slider.js"></script>
+<script src="js/accept.js"></script>
+<script src="js/darkmodemain.js"></script>
+</html>
