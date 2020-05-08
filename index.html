@@ -12,7 +12,7 @@
 <title>Me gusto</title>
 </head>
 <body>
-<header class="header">
+<header class="header" id="head">
     <div class="wrapper">
         <!-- Adapt menu -->
         <div class="hamburger-menu">
@@ -21,11 +21,14 @@
               <span></span>
             </label>
         
-            <ul class="menu__box">
-              <li><a class="menu__item" href="#">Меню</a></li>
+            <ul class="menu__box" id="head_adapt">
+              <li><a class="menu__item" href="menu/menu.html">Меню</a></li>
                     <li><a class="menu__item" href="#page3">Контакты</a></li>
                     <li><a class="menu__item" href="#page2">О нас</a></li>
-                    <li><a class="menu__item" href="#">Тёмная тема</a></li>
+                    <div class="menu__btn_body">
+                        <li><button class="menu__btn_black" id="menu__btn_adapt" onclick="darkmode();">Тёмная тема</button></li>
+                    <li><button class="menu__btn_white" id="menu__btn_adapt" onclick="lightmode();">Светлая тема</button></li>
+                    </div>
             </ul>
           </div>
         <!-- Dekstop menu -->
@@ -37,10 +40,13 @@
                 <a href="#"><h1>Me Gusto</h1></a>
             </div>
             <ul class="dekstop__menu">
-                <li><a href="#" class="menu_link">Меню</a></li>
+                <li><a href="menu/menu.html" class="menu_link">Меню</a></li>
                 <li><a href="#page3" class="menu_link">Контакты</a></li>
                 <li><a href="#page2" class="menu_link">О нас</a></li>
-                <li><a href="#" class="menu_link">Тёмная тема</a></li>
+                <div class="btn__menu_body">
+                    <li><button class="menu__btn_black" id="menu__btn" onclick="darkmode();">Тёмная тема</button></li>
+                    <li><button class="menu__btn_white" id="menu__btn" onclick="lightmode();">Светлая тема</button></li>
+                </div>
             </ul>
             <div class='header__img'>
                 <img src='imgs/pizza.png' class='pizza'>
@@ -66,7 +72,7 @@
 <section class="features" id="page2">
     <!-- feat == features -->
     <div class="wrapper">
-        <div class="feat__mainblock">
+        <div class="feat__mainblock" id="feat">
             <div class="feat__first-clm">
                 <div class="clm__text sh">
                     <h2>Особенности:</h2>
@@ -116,7 +122,7 @@
                 <input type="tel">
             </div>
             <div class="order__btn">
-                <button type="submit" onclick='accept()' class="accept">Сделать заказ</button>
+                <button type="submit" id="accept" onclick='accept()' class="accept">Сделать заказ</button>
             </div>
             <p class="order__number">Телефон: 0689940444, 0669940444</p>
         </div>
@@ -140,4 +146,5 @@
 </body>
 <script src="js/slider.js"></script>
 <script src="js/accept.js"></script>
+<script src="js/darkmodemain.js"></script>
 </html>
